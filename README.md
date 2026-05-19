@@ -1,25 +1,31 @@
-# demo-prototype — Gembox prototype
+# demo-prototype — Enterprise landing (Gembox)
 
-Static hello-world prototype using Gembox components (Site Banner, Modal, Input) and tokens from Figma. Runs from `file://` or any static server.
+React + Vite prototype of the Forage enterprise landing page. Uses Gembox tokens, components, and the internal-use site banner.
 
 ## Run locally
 
-Open `index.html` directly in a browser (`file:///…/index.html`), or serve the repo root:
-
 ```bash
-python3 -m http.server 8080
+npm install
+npm run dev
 ```
 
-Then visit `http://localhost:8080/`.
+Open the URL Vite prints (usually `http://localhost:5173/`).
 
-## Gate
+Production build preview (matches GitHub Pages base path):
 
-First visit shows a prototype access modal with an **Email Address** field. Access is stored in `sessionStorage` for the tab session. This is not production authentication.
+```bash
+GITHUB_PAGES=true npm run build
+npm run preview
+```
+
+## Live site
+
+https://dennis-best.github.io/demo-prototype/
 
 ## Gembox integration
 
-See [Gembox Cursor Integration](https://www.notion.so/34150ba3919d804bac88fed97249ed3a) for workflow, tokens, and GitHub Pages setup.
+See [Gembox Cursor Integration](https://www.notion.so/34150ba3919d804bac88fed97249ed3a) for workflow and tokens.
 
 ## GitHub Pages
 
-After enabling **Pages → GitHub Actions** for this repository, pushes to `main` deploy via `.github/workflows/deploy-pages.yml`.
+Pushes to `main` run `.github/workflows/deploy-pages.yml` (Vite build → `dist/`).

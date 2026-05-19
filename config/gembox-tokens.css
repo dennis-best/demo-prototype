@@ -15,4 +15,9 @@
   --ui-warn-background: #fffdf5;
   --ui-warn-primary: #be5700;
   --ui-white: #ffffff;
+  --ui-subtle: #737373;
+  --ui-background: #fbfbfb;
+  --semantic-ui-action-emphasis: #144c8b;
+  --semantic-ui-action-support: #76adeb;
+  --font-size-8: 26px;
 }
