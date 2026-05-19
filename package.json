@@ -4,9 +4,14 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start": "vite",
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "build:local": "tsc --noEmit && FILE_LOCAL=true vite build",
+    "build:pages": "tsc --noEmit && GITHUB_PAGES=true vite build",
+    "preview": "vite preview",
+    "open": "npm run build:local && open dist/index.html",
+    "serve": "npm run build:local && node scripts/serve-local.mjs"
   },
   "dependencies": {
     "react": "^18.3.1",

@@ -29,11 +29,9 @@ jobs:
           cache: npm
 
       - name: Install and build
-        env:
-          GITHUB_PAGES: "true"
         run: |
           npm ci
-          npm run build
+          npm run build:pages
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
